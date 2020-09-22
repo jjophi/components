@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+<style>
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-header{
+    background-color: rgb(13, 112, 199);
+}
+.page-header h1{
+    margin: 0;
+    color: #fff;
+}
+.page-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 12px;
+    position: relative;
+}
+.main-links{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.main-links li{
+    margin-left: 1.4rem;
+}
+.main-links a{
+    color: #fff;
+    text-decoration: none;
+}
+/*toggle btn*/
+.toggle-btn{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: calc(50% - 10px);
+    right: 30px;
+    background-color: #fff;
+    z-index: 99;
+}
+@media (max-width: 760px) {
+    .toggle-btn{
+        display: block;
+    }
+    .main-nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(29, 29, 29, 0);
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+    .main-nav.active{
+        background-color: rgba(29, 29, 29, 0.8);
+    }
+    .main-links{
+        position: absolute;
+        right: -300px;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        flex-flow: column nowrap;
+        padding: 3rem 1rem 1rem;
+        background-color: seagreen;
+        transition: right 0.3s;
+    }
+    .main-nav.active .main-links{
+        right: 0;
+    }
+    .main-links li{
+        margin: 0;
+        padding: 1em .4em .4em;
+        border-bottom: 1px solid rgb(65, 65, 65);
+    }
+}
+
+</style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container ">
+            <div class="brand"><h1>TecLightment</h1></div>
+            <nav class="main-nav">
+                <ul class="main-links">
+                    <li><a href="second-page.html">Home</a></li>
+                    <li><a href="second-page.html">About us</a></li>
+                    <li><a href="second-page.html">Process</a></li>
+                    <li><a href="second-page.html">Services</a></li>
+                    <li><a href="second-page.html">Testimonials</a></li>
+                    <li><a href="second-page.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-btn"></div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloremque dignissimos similique quisquam animi omnis? Exercitationem porro natus provident rerum voluptates odit aperiam, accusantium reprehenderit et minima numquam fugit, ipsam autem? Accusantium dolores iure recusandae labore dicta. Asperiores sunt ratione fugiat amet nulla soluta ipsam, deleniti, repellendus distinctio minus officia.</p>
+            <p>Doloribus cupiditate voluptatum, obcaecati ut ipsam beatae minus nemo sit ea esse sequi ex? Et blanditiis voluptatem enim officia molestiae natus! Quisquam suscipit libero, reprehenderit sint sapiente atque doloremque, esse quos magnam sed ab. Architecto, delectus debitis quaerat nisi dolore, minus libero explicabo ab voluptatum odio doloremque similique quibusdam incidunt?</p>
+            <p>Quod magni excepturi quidem officia non voluptatum, saepe ex rem aliquam quos, molestiae aspernatur deleniti a ipsum obcaecati unde! Molestias aliquid eligendi quod odit minima similique accusamus doloribus, expedita dolores laborum fugit explicabo, recusandae dolorem tempore, debitis suscipit aspernatur quos aut magni. Nisi dolor minus, vel reprehenderit quidem soluta vitae.</p>
+            <p>Dolore vero et earum labore aliquid, sapiente quos, ipsum repellendus asperiores consectetur inventore totam magni praesentium? Eaque doloremque ab quia necessitatibus ipsum? Obcaecati dicta tempora laboriosam, eos neque porro maxime amet commodi eum, adipisci nisi est quod aliquam. Autem consectetur, at quidem repellendus sit recusandae odio sint enim assumenda ducimus!</p>
+        </div>
+    </main>
+
+
+
+<script>
+const toggleBtn = document.querySelector('.toggle-btn');
+const mainNav = document.querySelector('.main-nav');
+
+toggleBtn.addEventListener('click', () => {
+    mainNav.classList.add('active');
+    document.addEventListener('click', clearToggleMenu, true);
+});
+function clearToggleMenu() {
+    console.log('testing********');
+    event.stopPropagation();
+    mainNav.classList.remove('active');
+    document.removeEventListener('click', clearToggleMenu, true);
+}
+</script>
+</body>
+</html>

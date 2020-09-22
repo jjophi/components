@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+<style>
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-header{
+    background-color: rgb(13, 112, 199);
+}
+.page-header h1{
+    margin: 0;
+    color: #fff;
+}
+.page-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 12px;
+    position: relative;
+}
+.main-links{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+.main-links li{
+    margin-left: 1.4rem;
+}
+.main-links a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu-toggle{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.toggle-label{
+    display: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    z-index: 20;
+}
+
+@media (max-width: 760px) {
+    .toggle-label{
+        display: block;
+    }
+    .menu-toggle:not(:checked) + .main-nav{
+        right: -300px;
+    }
+    .menu-toggle:checked + .main-nav{
+        right: 0;
+    }
+    .main-nav{
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 280px;
+        background-color: rgb(29, 29, 29);
+        padding: 2rem 1rem 0;
+        z-index: 10;
+        transition: right 0.3s;
+    }
+    .main-links{
+        flex-flow: column nowrap;
+    }
+    .main-links li{
+        margin: 0;
+        padding: 1rem 0 .4rem;
+        border-bottom: 1px solid rgb(65, 65, 65);
+    }
+}
+@keyframes menuSlide {
+    0% {
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+</style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container ">
+            <div class="brand"><h1>TecLightment</h1></div>
+            <label class="toggle-label" for="menu-toggle"></label>
+            <input type="checkbox" name="menu-toggle" id="menu-toggle" class="menu-toggle">
+            <nav class="main-nav">
+                <ul class="main-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Process</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat doloremque dignissimos similique quisquam animi omnis? Exercitationem porro natus provident rerum voluptates odit aperiam, accusantium reprehenderit et minima numquam fugit, ipsam autem? Accusantium dolores iure recusandae labore dicta. Asperiores sunt ratione fugiat amet nulla soluta ipsam, deleniti, repellendus distinctio minus officia.</p>
+            <p>Doloribus cupiditate voluptatum, obcaecati ut ipsam beatae minus nemo sit ea esse sequi ex? Et blanditiis voluptatem enim officia molestiae natus! Quisquam suscipit libero, reprehenderit sint sapiente atque doloremque, esse quos magnam sed ab. Architecto, delectus debitis quaerat nisi dolore, minus libero explicabo ab voluptatum odio doloremque similique quibusdam incidunt?</p>
+            <p>Quod magni excepturi quidem officia non voluptatum, saepe ex rem aliquam quos, molestiae aspernatur deleniti a ipsum obcaecati unde! Molestias aliquid eligendi quod odit minima similique accusamus doloribus, expedita dolores laborum fugit explicabo, recusandae dolorem tempore, debitis suscipit aspernatur quos aut magni. Nisi dolor minus, vel reprehenderit quidem soluta vitae.</p>
+            <p>Dolore vero et earum labore aliquid, sapiente quos, ipsum repellendus asperiores consectetur inventore totam magni praesentium? Eaque doloremque ab quia necessitatibus ipsum? Obcaecati dicta tempora laboriosam, eos neque porro maxime amet commodi eum, adipisci nisi est quod aliquam. Autem consectetur, at quidem repellendus sit recusandae odio sint enim assumenda ducimus!</p>
+        </div>
+    </main>
+</body>
+</html>
