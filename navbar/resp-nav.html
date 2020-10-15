@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Nav</title>
+<style>
+body{
+    margin: 0;
+}
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+/*menu*/
+.page-nav{
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+
+}
+.brand h1{
+    font-size: 1.2rem;
+}
+
+.main-menu{
+    position: relative;
+}
+.toggle-btn{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.main-menu ul{
+    display: none;
+    flex-flow: column;
+}
+.main-menu.active ul{
+    display: flex;
+}
+
+@media (min-width: 768px){
+    .page-nav{
+        background-color: #c0c0c0;
+    }
+    .main-menu ul{
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
+    .toggle-btn{
+        display: none;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="page-nav">
+        <div class="container">
+            <div class="brand">
+                <h1>Responsive Nav</h1>
+            </div>
+            <nav class="main-menu active">
+                <div class="toggle-btn">Menu</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">About</a></li>
+                    <li><a href="#">Process</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="col">
+                <h2>content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi quas perferendis consectetur cumque! Suscipit fugiat reprehenderit ab quis sequi commodi at earum sed illo rerum officia, inventore quod ut iste neque nam natus quae soluta maxime in eligendi? Veniam maxime ut perspiciatis ad itaque voluptatibus incidunt, ducimus debitis magni!</p>
+                <p>Vel est, dolorem fuga ab ad corrupti nobis reprehenderit itaque consectetur explicabo eos laborum, sequi maiores tempora nesciunt alias nemo necessitatibus tenetur assumenda non beatae? Fugiat, necessitatibus ipsa hic a, soluta quae odit accusamus, laudantium dolorem fuga perferendis quisquam? Aliquam alias distinctio, ducimus praesentium labore asperiores esse quia officia iusto?</p>
+                <p>Numquam nobis dicta deserunt praesentium molestias, quam tenetur sapiente modi! Placeat rem quod exercitationem temporibus reprehenderit, commodi enim vero earum fuga labore! Aliquam, sunt minima! Nemo asperiores, iste veniam iure molestias ut nostrum veritatis nam consequatur libero reiciendis quas beatae omnis sed qui magnam similique. Iure tempora sapiente rem atque.</p>
+                <p>Vitae ut quo natus autem consequuntur blanditiis itaque quam. Id rerum dolor reiciendis. Ipsa ducimus quidem tempore perspiciatis odio omnis alias repellat beatae voluptas molestiae in ut eaque eligendi dignissimos totam dicta illum sed, sit reiciendis vel cupiditate! Dignissimos nihil beatae earum asperiores veritatis, consectetur ipsam debitis expedita esse praesentium!</p>
+                <p>Incidunt quasi, nisi expedita quis sit id vero fugiat deleniti similique saepe ipsam sequi excepturi quas obcaecati inventore dolore, necessitatibus provident, alias omnis. Quos enim reprehenderit expedita cum eaque. Maxime ab, accusamus voluptates debitis optio eveniet non nobis eum quibusdam eius facilis voluptate explicabo iste placeat qui temporibus, neque at!</p>
+                <p>Perspiciatis quisquam laborum deserunt voluptatibus molestias minus error odio eum vero quas. Eius explicabo eum, rem sint hic dicta deserunt, eos non obcaecati esse possimus deleniti necessitatibus consequatur corporis nemo ullam quos consectetur est numquam similique. Ab nesciunt hic quos aut, fugiat consequatur laborum fugit voluptates atque, eius soluta porro.</p>
+                <p>Adipisci similique cum reprehenderit ad ex magnam! Voluptas sed nisi eligendi at dolore labore corporis minus laboriosam commodi eaque voluptatem quaerat, soluta adipisci ea nulla similique? Beatae veniam a perspiciatis cupiditate minus suscipit sint quidem nesciunt veritatis voluptatum provident, reiciendis pariatur libero ipsam omnis dolorum nam, error tempore laboriosam quod!</p>
+                <p>Amet suscipit sequi eos fugiat recusandae necessitatibus. Veniam eos quis pariatur officia aspernatur laudantium assumenda minima impedit repellendus laborum earum ex eum eligendi incidunt officiis delectus dicta atque accusamus, dolorum voluptatem! Aliquid, veritatis velit natus nulla doloribus beatae asperiores libero eos a distinctio sint quae magni, voluptas vero culpa aspernatur.</p>
+                <p>Quas, repellat. Exercitationem et dignissimos reprehenderit blanditiis, consequatur nisi omnis vitae quam atque deleniti assumenda voluptates laboriosam explicabo, totam adipisci architecto non ea! Rerum cumque ea quaerat. Minima maiores ipsam a aut labore vitae voluptate iste quis, quasi laudantium, eaque praesentium ullam rerum. At, aperiam? Eaque voluptates nemo voluptate accusamus?</p>
+                <p>In quia obcaecati quidem, fuga minima eum voluptatibus debitis voluptatem. Numquam aliquam quisquam, cupiditate perspiciatis ipsum sed id nobis ut esse ullam expedita voluptatem, distinctio, optio nulla similique rerum. Blanditiis, sapiente laboriosam. Labore voluptate pariatur explicabo neque est perferendis, animi quaerat numquam mollitia sapiente ipsa quia reprehenderit quas iusto. Nobis.</p>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci provident aspernatur, minus repudiandae placeat impedit nulla voluptatem ipsum, numquam possimus aliquam magni nemo sequi ipsam. Amet architecto consectetur odit maxime quo dignissimos enim! Expedita, explicabo. Esse neque amet vitae tempore totam odit veniam ex nostrum distinctio? Consequatur aliquam repellendus accusamus quas! Quos, maiores iste. Earum, libero. Officiis perferendis quis ipsa necessitatibus molestias impedit, alias corporis repudiandae ipsam assumenda magnam quasi cupiditate neque et! Vitae iure odit, rem molestiae inventore quae modi, nemo magnam voluptatibus minima quo illo maiores tempora praesentium aut vel voluptatem sit saepe qui voluptas asperiores eligendi magni.</p>
+                <p>Fuga perferendis temporibus delectus doloremque rem provident nulla blanditiis sapiente natus facilis eligendi esse, soluta nemo asperiores. Hic dolore facere error modi atque aliquid voluptas doloribus fugit tenetur molestias, nihil soluta ducimus eos delectus, unde nulla quibusdam maiores corrupti autem blanditiis natus! Voluptates nisi, perspiciatis vitae maiores quibusdam odio dolore impedit natus ipsa rem illum, unde iste officia, nesciunt ab fuga eligendi. Laudantium molestias assumenda fugiat voluptatum eius. Explicabo nostrum corporis officia magnam eum velit, dolores ratione voluptate, eaque vitae similique. Odit consequuntur totam, rem ipsum commodi vero dolorum placeat tempora ex maxime eum est rerum iusto voluptas delectus velit!</p>
+                <p>Itaque, a? Cupiditate facilis pariatur commodi illum, nesciunt similique sapiente! Officia veritatis in error odio quia sint pariatur animi voluptate! Et, cum nemo? Ipsam sunt, non sapiente necessitatibus quae hic similique architecto error neque sequi pariatur repellat! Repellendus eligendi possimus vero fugit sed illo. Asperiores vel, nemo at, voluptas laborum expedita ex rerum repellat soluta et tempore delectus dolore voluptatum optio provident. Deserunt dignissimos ipsam ut perferendis error! Atque labore reiciendis quod, voluptatum repellendus maiores culpa dolores soluta, ex id saepe, magnam voluptates qui autem maxime possimus quae necessitatibus a. Quasi deserunt non provident eveniet sequi unde, fugit laborum nesciunt!</p>
+            </div>
+        </div>
+    </section>
+<script>
+let toggleBtn = document.querySelector('.toggle-btn');
+let mainMenu = document.querySelector('.main-menu')
+toggleBtn.addEventListener('click', ()=> {
+    mainMenu.classList.toggle('active');
+})
+</script>
+</body>
+</html>
